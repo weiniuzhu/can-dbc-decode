@@ -1,0 +1,23 @@
+{
+  "name": "can-dbc-decode",
+  "version": "0.0.1",
+  "description": "decode CAN DBC data",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intecessor/can-dbc-decode.git"
+  },
+  "author": "Jason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intecessor/can-dbc-decode/issues"
+  },
+  "homepage": "https://github.com/intecessor/can-dbc-decode#readme",
+  "dependencies": {
+    "bitwise": "^2.0.3",
+    "round-to": "^4.0.0"
+  }
+}
