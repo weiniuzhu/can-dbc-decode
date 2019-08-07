@@ -1,6 +1,6 @@
 {
   "name": "can-dbc-decode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "decode CAN DBC data",
   "main": "index.js",
   "scripts": {

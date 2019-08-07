@@ -54,7 +54,7 @@ It will decode the data in red frame<br>
 ## Input params
 
 ### rawData
-`String`, the input Hex data without `0x`, ** rawData should be no signed **.<br>
+`String`, the input Hex data without `0x`, **rawData should be no signed**.<br>
 `* required`
 ### start
 `Integer`, the start bit position.<br>
@@ -70,7 +70,7 @@ default: 1
 default: 0
 ### precision
 `Interger`, Max precesion of returned data.<br>
-default: -1 // no limitation
+default: undifined // no limitation
 ### endianness
 `0 or 1`, 0 - Intel(little endian) and 1 - Motorola(big endian).<br>
 default: 0 - Intel(little endian)
