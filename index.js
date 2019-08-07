@@ -16,6 +16,23 @@ module.exports = function decode(input) {
     precision,
     endianness
   } = input
-  const res = readData(rawData, start, size,endianness);
-  return roundTo(res * (factor || 1) + (offset || 0), Math.min(precision || 20, getPrecesion(res * factor + offset)))
+
+  if (typeof rawData === 'undefined') {
+    throw new Error('input HEX data is required')
+  }
+
+  if (rawData.length < 16) {
+    throw new Error('Invalid input HEX data')
+  }
+
+  if (!Number.isInteger(start)) {
+    throw new Error('Invalid start position')
+  }
+
+  if (!size || !Number.isInteger(size)) {
+    throw new Error('Invalid bit size')
+  }
+
+  const res = readData(rawData, start, size, endianness);
+  return roundTo(res * (factor || 1) + (offset || 0), Math.min(precision || 20, getPrecesion(res * (factor || 1) + (offset || 0))))
 }

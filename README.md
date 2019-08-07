@@ -28,24 +28,30 @@ decode(input)
 
 ## Concept
 Assuming the rawData in HEX is `0x0000047900000033`, grouped HEX data is `00 00 04 79 00 00 00 33`<br>
-The bit map of this rawData is
-![bitMap](https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitsmap.PNG)
+In Motorola(big endian) format, The bit map of this rawData is<br>
 
+<img src="https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitsmap.PNG" alt="bitMap" width="300"/>
+
+<br>
 assuming we have several data in this rawData to be decoded, for example
 ```
-  start: 59,
+  start: 60,
   size: 4,
   factor: 1,
   offset: 0,
   precision: 5,
   endianness: 1
 ```
-it will decode the data in red frame
-![bitMap](https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitdata.png)
+it will decode the data in red frame<br>
+
+<img src="https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitdata.png" alt="bitMap" width="300"/>
+
+<br>
 
 ## Input params
+
 ### rawData
-`String`, the input Hex data without `0x`.<br>
+`String`, the input Hex data without `0x`, ** rawData should be no signed **.<br>
 `* required`
 ### start
 `Integer`, the start bit position.<br>
@@ -64,7 +70,8 @@ default: 0
 default: -1 // no limitation
 ### endianness
 `0 or 1`, 0 - Intel(little endian) and 1 - Motorola(big endian).<br>
-default: 0
+default: 0 - Intel(little endian)
+
 
 ## License
 MIT License
