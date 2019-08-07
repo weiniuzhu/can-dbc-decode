@@ -2,7 +2,6 @@
 
 const roundTo = require('round-to');
 const {
-  reOrder,
   getPrecesion,
   readData
 } = require('./utils.js');
@@ -17,6 +16,6 @@ module.exports = function decode(input) {
     precision,
     endianness
   } = input
-  const res = readData(reOrder(rawData), start, size);
-  return roundTo(res * factor + offset, Math.min(precision, getPrecesion(res * factor + offset)))
+  const res = readData(rawData, start, size,endianness);
+  return roundTo(res * (factor || 1) + (offset || 0), Math.min(precision || 20, getPrecesion(res * factor + offset)))
 }

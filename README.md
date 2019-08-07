@@ -22,14 +22,14 @@ const input = {
 
 decode(input)
 
-//=>438.7
+// => 438.7
 
 ```
 
 ## Concept
 Assuming the rawData in HEX is `0x0000047900000033`, grouped HEX data is `00 00 04 79 00 00 00 33`<br>
 The bit map of this rawData is
-![bitMap]()
+![bitMap](https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitsmap.PNG)
 
 assuming we have several data in this rawData to be decoded, for example
 ```
@@ -41,7 +41,7 @@ assuming we have several data in this rawData to be decoded, for example
   endianness: 1
 ```
 it will decode the data in red frame
-![bitMap]()
+![bitMap](https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitdata.png)
 
 ## Input params
 ### rawData
@@ -65,5 +65,10 @@ default: -1 // no limitation
 ### endianness
 `0 or 1`, 0 - Intel(little endian) and 1 - Motorola(big endian).<br>
 default: 0
+
+## License
+MIT License
+
+Copyright (c) 2019 intecessor
 
 

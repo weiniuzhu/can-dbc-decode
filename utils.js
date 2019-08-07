@@ -1,7 +1,7 @@
 const bitwise = require('bitwise');
 
 function reOrder(s) {
-  if (s && s.length > 15) {
+  if (e === 0) {
     let res = []
     for (let i = 0; i < 8; i++) {
       res.push(s.slice(i * 2, i * 2 + 2))
@@ -9,7 +9,7 @@ function reOrder(s) {
     let arr = res.reverse();
     return arr.join("")
   } else {
-    return ''
+    return s
   }
 };
 
@@ -26,14 +26,14 @@ function getPrecesion(a) {
 }
 
 
-function readData(data, start, size) {
+function readData(rawData, start, size, endianness) {
+  const data = endianness === 1 ? rawData : reOrder(rawData)
   const bitArr = bitwise.buffer.read(Buffer.from(data, 'hex'))
-  const targetbit = bitArr.slice(64 - start - size, 64 - start)
+  const targetbit = bitArr.slice(endianness === 1 ? start : (64 - start - size), endianness === 1 ? size : (64 - start))
   return parseInt(targetbit.join(''), 2)
 }
 
 module.exports = {
-  reOrder,
   getPrecesion,
   readData
 }
