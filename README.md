@@ -33,7 +33,9 @@ In Motorola(big endian) format, The bit map of this rawData is<br>
 <img src="https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitsmap.PNG" alt="bitMap" width="300"/>
 
 <br>
+
 assuming we have several data in this rawData to be decoded, for example
+
 ```
   start: 60,
   size: 4,
@@ -42,6 +44,7 @@ assuming we have several data in this rawData to be decoded, for example
   precision: 5,
   endianness: 1
 ```
+
 it will decode the data in red frame<br>
 
 <img src="https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitdata.png" alt="bitMap" width="300"/>
