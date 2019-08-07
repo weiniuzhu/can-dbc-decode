@@ -30,11 +30,11 @@ decode(input)
 Assuming the rawData in HEX is `0x0000047900000033`, grouped HEX data is `00 00 04 79 00 00 00 33`<br>
 In Motorola(big endian) format, The bit map of this rawData is<br>
 
-<img src="https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitsmap.PNG" alt="bitMap" width="300"/>
+<img src="https://raw.githubusercontent.com/intecessor/can-dbc-decode/master/assets/bitsmap.PNG" alt="bitMap" width="300" style="max-width:100%;margin:0 auto;display:block"/>
 
 <br>
 
-assuming we have several data in this rawData to be decoded, for example
+If have below input:
 
 ```
   start: 60,
@@ -45,9 +45,9 @@ assuming we have several data in this rawData to be decoded, for example
   endianness: 1
 ```
 
-it will decode the data in red frame<br>
+It will decode the data in red frame<br>
 
-<img src="https://github.com/intecessor/can-dbc-decode/blob/master/assets/bitdata.png" alt="bitMap" width="300"/>
+<img src="https://raw.githubusercontent.com/intecessor/can-dbc-decode/master/assets/bitdata.png" alt="bitMap" width="300" style="max-width:100%;margin:0 auto;display:block" />
 
 <br>
 
